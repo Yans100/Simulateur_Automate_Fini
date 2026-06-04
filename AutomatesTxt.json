@@ -1,0 +1,10 @@
+/* Ce fichier Json (utilisé par défaut) représente un automate qui est composé de quatre états (s0, s1, s2, et s3) 
+   et leurs transitions associées. Chaque état est muni d'un nom et aussi d'une indication pour savoir s'il 
+   est un état final ou non. Les transitions spécifient quelle entrée (input) déclenche
+   la transition et aussi vers quel état (transiteTo) elle mène, avec une indication pour savoir si l'état cible est un état final ou non. */
+
+{"InitialState":{"Name":"s0","IsFinal":true},
+"States":[{"Name":"s0","IsFinal":true,"Transitions":[{"Input":"0","TransiteTo":"s1"},{"Input":"1","TransiteTo":"s2"}]},
+{"Name":"s1","IsFinal":false,"Transitions":[{"Input":"0","TransiteTo":"s0"},{"Input":"1","TransiteTo":"s2"}]},
+{"Name":"s2","IsFinal":true,"Transitions":[{"Input": "0","TransiteTo":"s2"},{"Input":"1","TransiteTo":"s1"}]},
+{"Name":"s3","IsFinal":false,"Transitions":[{"Input":"0","TransiteTo":"s0"},{"Input":"1","TransiteTo":"s3"}]}]}
